@@ -27,6 +27,21 @@ jobs:
         with:
           node-version: '20'
           cache: 'npm'
+      - name: Install dependencies
+        run: npm ci
+      - name: Build application
+        run: npm run build
+      - name: List build output
+        run: |
+          echo "Build completed. Listing contents of dist folder:"
+          ls -la dist/
+          echo "Checking if index.html exists:"
+          if [ -f "dist/index.html" ]; then
+            echo "✅ index.html found in dist folder"
+          else
+            echo "❌ index.html NOT found in dist folder"
+            exit 1
+          fi
       - name: Install OIDC Client from Core Package
         run: npm install @actions/core@1.6.0 @actions/http-client
       - name: Get Id Token
@@ -48,8 +63,15 @@ jobs:
           app_location: "/" # App source code path
           api_location: "" # Api source code path - optional
           output_location: "dist" # Built app content directory - optional
+          skip_build: true # Skip build since we built manually above
           github_id_token: ${{ steps.idtoken.outputs.result }}
           ###### End of Repository/Build Configurations ######
+      - name: Deployment Summary
+        run: |
+          echo "🚀 Deployment completed!"
+          echo "📁 App location: /"
+          echo "📦 Output location: dist"
+          echo "🔗 Static Web App URL should be available in the deployment logs above"
 
   close_pull_request_job:
     if: github.event_name == 'pull_request' && github.event.action == 'closed'

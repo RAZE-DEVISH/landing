@@ -1,0 +1,15 @@
+{
+  "navigationFallback": {
+    "rewrite": "/index.html",
+    "exclude": ["/images/*.{png,jpg,gif,svg}", "/css/*", "/js/*", "/api/*"]
+  },
+  "mimeTypes": {
+    ".json": "application/json",
+    ".js": "application/javascript",
+    ".css": "text/css",
+    ".svg": "image/svg+xml"
+  },
+  "globalHeaders": {
+    "Cache-Control": "no-cache"
+  }
+}
