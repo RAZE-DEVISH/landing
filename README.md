@@ -4,7 +4,7 @@ Jorge Raze's personal landing page built with React, TypeScript, and Vite.
 
 ## 🚀 Live Site
 
-Visit the live site at: **<https://raze-devish.github.io/>**
+Visit the live site at: **<https://raze.mx>**
 
 ## 🛠️ Tech Stack
 
