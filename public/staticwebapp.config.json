@@ -1,7 +1,7 @@
 {
   "navigationFallback": {
     "rewrite": "/index.html",
-    "exclude": ["/images/*.{png,jpg,gif,svg}", "/css/*", "/js/*", "/api/*", "/assets/*"]
+    "exclude": ["/images/*.{png,jpg,gif,svg}", "/css/*", "/js/*", "/api/*", "/assets/*", "*.{css,js,woff,woff2,ttf,svg,png,jpg,jpeg,gif,ico}"]
   },
   "mimeTypes": {
     ".json": "application/json",
@@ -9,7 +9,12 @@
     ".css": "text/css",
     ".svg": "image/svg+xml"
   },
-  "globalHeaders": {
-    "Cache-Control": "no-cache"
-  }
+  "routes": [
+    {
+      "route": "/*",
+      "headers": {
+        "Cache-Control": "no-store, no-cache, must-revalidate, proxy-revalidate, max-age=0"
+      }
+    }
+  ]
 }
