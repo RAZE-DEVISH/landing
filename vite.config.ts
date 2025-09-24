@@ -10,5 +10,5 @@ export default defineConfig({
     sourcemap: false,
     minify: 'esbuild'
   },
-  base: '/'
+  base: '/landing/' // GitHub Pages subdirectory
 })
