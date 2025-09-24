@@ -4,7 +4,7 @@ Jorge Raze's personal landing page built with React, TypeScript, and Vite.
 
 ## 🚀 Live Site
 
-Visit the live site at: **<https://raze-devish.github.io/landing/>**
+Visit the live site at: **<https://raze-devish.github.io/>**
 
 ## 🛠️ Tech Stack
 
@@ -38,12 +38,12 @@ This site automatically deploys to GitHub Pages when changes are pushed to the `
 The deployment workflow:
 
 1. Builds the React app with Vite
-2. Configures for GitHub Pages subdirectory (`/landing/`)
+2. Configures for GitHub Pages root domain (`/`)
 3. Deploys to GitHub Pages using GitHub Actions
 
 ## 🔧 Configuration
 
-- **Base Path**: `/landing/` (configured in `vite.config.ts`)
+- **Base Path**: `/` (configured in `vite.config.ts`)
 - **Node.js Version**: 20.19.0 (specified in `.nvmrc`)
 - **Build Output**: `dist/` directory
 
