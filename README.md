@@ -1,15 +1,51 @@
-# React + TypeScript + Vite
+# Raze Landing Page
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Jorge Raze's personal landing page built with React, TypeScript, and Vite.
 
-Currently, two official plugins are available:
+## 🚀 Live Site
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Visit the live site at: **<https://raze-devish.github.io/landing/>**
 
-## Expanding the ESLint configuration
+## 🛠️ Tech Stack
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **React 19** - UI Library
+- **TypeScript** - Type Safety
+- **Vite 7** - Build Tool & Dev Server
+- **Framer Motion** - Animations
+- **Lucide React** - Icons
+- **GitHub Pages** - Hosting
+
+## 💻 Development
+
+```bash
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
+
+# Build for production
+npm run build
+
+# Preview production build
+npm run preview
+```
+
+## 📦 Deployment
+
+This site automatically deploys to GitHub Pages when changes are pushed to the `main` branch.
+
+The deployment workflow:
+
+1. Builds the React app with Vite
+2. Configures for GitHub Pages subdirectory (`/landing/`)
+3. Deploys to GitHub Pages using GitHub Actions
+
+## 🔧 Configuration
+
+- **Base Path**: `/landing/` (configured in `vite.config.ts`)
+- **Node.js Version**: 20.19.0 (specified in `.nvmrc`)
+- **Build Output**: `dist/` directory
 
 ```js
 export default defineConfig([
